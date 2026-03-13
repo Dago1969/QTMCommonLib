@@ -1,3 +1,12 @@
+## 🚦 Committa tutto
+
+Quando l’utente chiede "committa tutto" devi SEMPRE:
+
+1. Eseguire `git add .` su tutti i progetti della workspace.
+2. Eseguire `git commit -m "<messaggio>"` su tutti i progetti (usa un messaggio coerente con le modifiche).
+3. Eseguire `git push` su tutti i progetti.
+
+Devi eseguire questi comandi in sequenza, per ogni progetto, e confermare l’avvenuto push.
 # Istruzioni per GitHub Copilot Chat
 
 ## Stile di interazione
