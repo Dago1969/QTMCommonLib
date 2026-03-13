@@ -101,6 +101,7 @@ Comunica sempre in modo chiaro e conciso, con un tono amichevole ma professional
 
 ## Principi generali di programmazione
 - Se devi lanciare comandi maven usa sempre il comando mvn
+- Quando devi compilare o buildare una componente frontend, esegui sempre il comando dalla directory `frontend` del progetto.
 - Ovunque possibile, utilizzare le Java Stream API
 - Preferire uno stile di codice Java funzionale
 - Rispettare il principio di single responsibility

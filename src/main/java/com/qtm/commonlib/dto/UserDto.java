@@ -16,9 +16,17 @@ public class UserDto {
     private String username;
     private boolean enabled;
     private String roleId;
+    /**
+     * Client applicativo richiesto in fase di provisioning su Keycloak.
+     */
+    private String clientId;
     private Long structureId;
     /**
      * Email dell'utente (univoca, usata per login e comunicazioni).
      */
     private String email;
+    /**
+     * Password generata e assegnata (solo provisioning, non serializzata in output pubblico).
+     */
+    private String password;
 }
