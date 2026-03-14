@@ -108,6 +108,18 @@ Comunica sempre in modo chiaro e conciso, con un tono amichevole ma professional
 ## Principi generali di programmazione
 - Se devi lanciare comandi maven usa sempre il comando mvn
 - Quando devi compilare o buildare una componente frontend, esegui sempre il comando dalla directory `frontend` del progetto.
+- Quando modifichi un testo visibile in una pagina frontend devi SEMPRE:
+  - leggere prima il template/componente interessato e individuare dove viene risolto il testo
+  - usare o creare una chiave di traduzione nei file messages/properties di tutte le lingue gestite
+  - aggiornare il template/componente affinche usi la chiave di traduzione e non testo inline
+  - mantenere coerente il naming delle chiavi con il modulo/pagina di appartenenza
+  - verificare che il significato funzionale del testo non cambi accidentalmente
+  - ricompilare sempre il frontend dal path `frontend` dopo la modifica
+- Quando modifichi un testo visibile in una pagina frontend NON devi MAI:
+  - inserire testo hardcoded in html, template inline, componenti TypeScript o costanti locali se il testo e mostrato all’utente
+  - aggiornare solo una lingua lasciando chiavi mancanti o traduzioni disallineate
+  - riutilizzare chiavi esistenti con significato diverso solo per evitare di crearne una nuova
+  - modificare testi utente senza controllare eventuali validazioni, messaggi di errore e test collegati
 - Ovunque possibile, utilizzare le Java Stream API
 - Preferire uno stile di codice Java funzionale
 - Rispettare il principio di single responsibility
