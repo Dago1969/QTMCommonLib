@@ -16,4 +16,8 @@ public class RoleDto {
     private String name;
     private String description;
     private String sourceRoleId;
+    private Long tenantId;
+    /**
+     * Tenant associato al ruolo (nullabile, id).
+     */
 }

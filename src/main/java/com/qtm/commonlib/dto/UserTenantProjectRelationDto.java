@@ -18,7 +18,7 @@ public class UserTenantProjectRelationDto {
     private String username;
     private Long tenantId;
     private String tenantName;
-    private Long projectId; // può essere nullo
+    private Long projectId; 
     private String projectCode;
     private boolean superuser;
     /**
