@@ -7,7 +7,6 @@ import lombok.Data;
  */
 @Data
 public class UserTenantRoleRelationDto {
-    private Long id;
     private Long userId;
     private Long tenantId;
     private String roleId;
