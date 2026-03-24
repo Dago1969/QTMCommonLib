@@ -1,1 +1,11 @@
+com\qtm\commonlib\dto\UserTenantRoleRelationDto.class
+com\qtm\commonlib\dto\UserTenantProjectRelationDto.class
 com\qtm\commonlib\dto\PatientDto.class
+com\qtm\commonlib\dto\TenantDto$TenantDtoBuilder.class
+com\qtm\commonlib\dto\UserDto.class
+com\qtm\commonlib\dto\TenantDto.class
+com\qtm\commonlib\dto\RoleDeleteCheckDto.class
+com\qtm\commonlib\dto\RoleDeleteLinkedUserDto.class
+com\qtm\commonlib\dto\RoleDto.class
+com\qtm\commonlib\dto\ProjectDto.class
+com\qtm\commonlib\dto\UserTenantProjectRelationDto$UserTenantProjectRelationDtoBuilder.class
