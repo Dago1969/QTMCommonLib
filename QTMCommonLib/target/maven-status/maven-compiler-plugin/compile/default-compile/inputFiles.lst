@@ -6,4 +6,5 @@ D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\UserTenantRole
 D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\RoleDeleteCheckDto.java
 D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\RoleDeleteLinkedUserDto.java
 D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\RoleDto.java
+D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\UserRoleProjectDto.java
 D:\workspace\QTM\QTMCommonLib\src\main\java\com\qtm\commonlib\dto\UserTenantProjectRelationDto.java

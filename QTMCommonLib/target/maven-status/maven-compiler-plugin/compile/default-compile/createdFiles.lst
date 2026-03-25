@@ -1,3 +1,4 @@
+com\qtm\commonlib\dto\UserRoleProjectDto.class
 com\qtm\commonlib\dto\UserTenantRoleRelationDto.class
 com\qtm\commonlib\dto\UserTenantProjectRelationDto.class
 com\qtm\commonlib\dto\PatientDto.class
