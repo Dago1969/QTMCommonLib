@@ -10,5 +10,5 @@ public class UserRoleProjectDto {
     private Long userId;
     private Long tenantId;
     private String roleId;
-    private String projectId;
+    private Long projectId;
 }

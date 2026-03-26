@@ -27,4 +27,9 @@ public class UserTenantProjectRelationDto {
      * Email dell'utente (se disponibile).
      */
     private String email;
+
+    /**
+     * Id del ruolo associato alla relazione.
+     */
+    private String roleId;
 }
