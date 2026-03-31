@@ -7,7 +7,17 @@
   <button type="button" (click)="startNewPatient()">{{ t('patientsTester.action.new') }}</button>
 </form>
 
-<div *ngIf="error" class="error">{{ error }}</div>
+
+<!-- Banner notifiche evanescenti -->
+<ng-container *ngIf="notificationService.notification$ | async as notification">
+  <div [ngClass]="{
+    'notification-banner': true,
+    'notification-success': notification.type === 'success',
+    'notification-error': notification.type === 'error'
+  }">
+    {{ notification.message }}
+  </div>
+</ng-container>
 
 <table *ngIf="patients.length" class="results">
   <thead>

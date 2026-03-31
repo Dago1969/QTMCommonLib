@@ -5,6 +5,7 @@ import { PatientApiService, PatientDto } from './core/patient-api.service';
 import { NgIf, NgFor, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { I18nPropertiesService } from './core/i18n-properties.service';
+import { NotificationService } from '../../TENANTS-APP/frontend/src/app/shared/notification.service';
 
 @Component({
   selector: 'app-patients-tester',
@@ -18,14 +19,14 @@ export class PatientsTesterComponent implements OnInit {
   searchForm: FormGroup;
   patients: PatientDto[] = [];
   selectedPatient: PatientDto | null = null;
-  error: string | null = null;
   loading = false;
   translations: Record<string, string> = {};
 
   constructor(
     private fb: FormBuilder,
     private patientApi: PatientApiService,
-    private readonly i18nPropertiesService: I18nPropertiesService
+    private readonly i18nPropertiesService: I18nPropertiesService,
+    private readonly notificationService: NotificationService
   ) {
     this.searchForm = this.fb.group({
       firstName: [''],
@@ -48,10 +49,16 @@ export class PatientsTesterComponent implements OnInit {
 
   search() {
     this.loading = true;
-    this.error = null;
     this.patientApi.searchPatients(this.searchForm.value).subscribe({
-      next: (res: PatientDto[]) => { this.patients = res; this.loading = false; },
-      error: (err: any) => { this.error = err?.message || this.t('patientsTester.error.generic'); this.loading = false; }
+      next: (res: PatientDto[]) => {
+        this.patients = res;
+        this.loading = false;
+        this.notificationService.showSuccess(this.t('patientsTester.success.search'));
+      },
+      error: (err: any) => {
+        this.loading = false;
+        this.notificationService.showError(err?.message || this.t('patientsTester.error.generic'));
+      }
     });
   }
 
@@ -84,8 +91,16 @@ export class PatientsTesterComponent implements OnInit {
       : this.patientApi.createPatient(this.selectedPatient);
     this.loading = true;
     op.subscribe({
-      next: () => { this.search(); this.clearSelection(); },
-      error: (err: any) => { this.error = err?.message || this.t('patientsTester.error.generic'); this.loading = false; }
+      next: () => {
+        this.search();
+        this.clearSelection();
+        this.notificationService.showSuccess(this.t('patientsTester.success.save'));
+        this.loading = false;
+      },
+      error: (err: any) => {
+        this.loading = false;
+        this.notificationService.showError(err?.message || this.t('patientsTester.error.generic'));
+      }
     });
   }
 
@@ -93,8 +108,15 @@ export class PatientsTesterComponent implements OnInit {
     if (!confirm(this.t('patientsTester.confirm.delete'))) return;
     this.loading = true;
     this.patientApi.deletePatient(id).subscribe({
-      next: () => { this.search(); },
-      error: (err: any) => { this.error = err?.message || this.t('patientsTester.error.generic'); this.loading = false; }
+      next: () => {
+        this.search();
+        this.notificationService.showSuccess(this.t('patientsTester.success.delete'));
+        this.loading = false;
+      },
+      error: (err: any) => {
+        this.loading = false;
+        this.notificationService.showError(err?.message || this.t('patientsTester.error.generic'));
+      }
     });
   }
 }

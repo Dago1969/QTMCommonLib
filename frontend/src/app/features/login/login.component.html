@@ -14,6 +14,15 @@
       <button class="btn btn-primary" type="submit">{{ t('login.action.submit') }}</button>
     </form>
 
-    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <!-- Banner notifiche evanescenti -->
+    <ng-container *ngIf="notificationService.notification$ | async as notification">
+      <div [ngClass]="{
+        'notification-banner': true,
+        'notification-success': notification.type === 'success',
+        'notification-error': notification.type === 'error'
+      }">
+        {{ notification.message }}
+      </div>
+    </ng-container>
   </div>
 </div>

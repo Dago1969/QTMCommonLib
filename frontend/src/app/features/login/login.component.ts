@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { AuthService } from '../../core/auth.service';
 import { I18nPropertiesService } from '../../core/i18n-properties.service';
+import { NotificationService } from '../../../TENANTS-APP/frontend/src/app/shared/notification.service';
 
 /**
  * Pagina login che invia username/password al backend per autenticazione Keycloak.
@@ -16,7 +17,6 @@ import { I18nPropertiesService } from '../../core/i18n-properties.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
-  errorMessage = '';
   translations: Record<string, string> = {};
   readonly loginForm;
 
@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly authService: AuthService,
     private readonly router: Router,
-    private readonly i18nPropertiesService: I18nPropertiesService
+    private readonly i18nPropertiesService: I18nPropertiesService,
+    private readonly notificationService: NotificationService
   ) {
     this.loginForm = this.formBuilder.nonNullable.group({
       username: ['francesco.tripodi', [Validators.required]],
@@ -46,7 +47,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginForm.invalid) {
-      this.errorMessage = this.t('login.error.requiredCredentials');
+      this.notificationService.showError(this.t('login.error.requiredCredentials'));
       return;
     }
 
@@ -54,18 +55,16 @@ export class LoginComponent implements OnInit {
     const normalizedUsername = username.trim();
 
     if (!normalizedUsername) {
-      this.errorMessage = this.t('login.error.requiredCredentials');
+      this.notificationService.showError(this.t('login.error.requiredCredentials'));
       return;
     }
-
-    this.errorMessage = '';
 
     this.authService.login(normalizedUsername, password).subscribe({
       next: () => {
         this.router.navigate(['/dashboard']);
       },
       error: () => {
-        this.errorMessage = this.t('login.error.failedAccess');
+        this.notificationService.showError(this.t('login.error.failedAccess'));
       }
     });
   }
