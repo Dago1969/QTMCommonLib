@@ -22,6 +22,7 @@ public class UserTenantProjectRelationDto {
     private Long projectId; 
     private String projectCode;
     private String projectDescription;
+    private String roleId;
     private boolean superuser;
     /**
      * Email dell'utente (se disponibile).
