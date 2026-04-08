@@ -31,6 +31,11 @@ public class UserDto {
     private String password;
 
     /**
+     * Indica se la password assegnata deve essere temporanea e obbligare il cambio al primo accesso.
+     */
+    private boolean temporaryPassword;
+
+    /**
      * Numero di telefono dell'utente.
      */
     private String telefono;
