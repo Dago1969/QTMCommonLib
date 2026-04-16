@@ -29,4 +29,29 @@ public class UserDto {
      * Password generata e assegnata (solo provisioning, non serializzata in output pubblico).
      */
     private String password;
+
+    /**
+     * Indica se la password assegnata deve essere temporanea e obbligare il cambio al primo accesso.
+     */
+    private boolean temporaryPassword;
+
+    /**
+     * Numero di telefono dell'utente.
+     */
+    private String telefono;
+
+    /**
+     * Codice fiscale dell'utente.
+     */
+    private String codiceFiscale;
+
+    /**
+     * Data fine validità password.
+     */
+    private java.time.LocalDate dataFineValiditaPassword;
+
+    /**
+     * Canale OTP preferito.
+     */
+    private String canaleOtp;
 }
