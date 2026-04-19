@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 /**
  * DTO paziente condiviso tra tutti i moduli QTM.
@@ -47,4 +48,13 @@ public class PatientDto {
     private String caregiverPhone;
     private String preferredContact;
     private Long structureId;
+    /**
+     * Data di nascita del paziente.
+     */
+    private LocalDate birthDate;
+
+    /**
+     * Sesso del paziente ('M'=maschio, 'F'=femmina).
+     */
+    private String gender;
 }
