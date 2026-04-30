@@ -66,4 +66,9 @@ public class ProjectDto {
      * Elenco componenti/moduli abilitati per il progetto.
      */
     private List<String> enabledModuleCodes = new ArrayList<>();
+
+    /**
+     * Template JSON delle visite associato al progetto.
+     */
+    private String jsonVisit;
 }
