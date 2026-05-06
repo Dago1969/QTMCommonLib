@@ -16,6 +16,7 @@ public class UserDto {
     private String username;
     private boolean enabled;
     private String roleId;
+    private Long projectId;
     /**
      * Client applicativo richiesto in fase di provisioning su Keycloak.
      */
