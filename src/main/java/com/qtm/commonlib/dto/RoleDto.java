@@ -20,4 +20,8 @@ public class RoleDto {
     /**
      * Tenant associato al ruolo (nullabile, id).
      */
+    private String father;
+    /**
+     * ID del ruolo padre da cui è stato ereditato questo ruolo (nullabile).
+     */
 }
