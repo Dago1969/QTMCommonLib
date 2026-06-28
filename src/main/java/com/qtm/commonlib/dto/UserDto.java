@@ -55,4 +55,18 @@ public class UserDto {
      * Canale OTP preferito.
      */
     private String canaleOtp;
+
+    /**
+     * Flag per disabilitare l'invio automatico della mail di onboarding (usato quando un client esterno gestisce l'invio).
+     * Default: false (invia sempre)
+     */
+    private boolean skipOnboardingMail = false;
+
+    public boolean isSkipOnboardingMail() {
+        return skipOnboardingMail;
+    }
+
+    public void setSkipOnboardingMail(boolean skipOnboardingMail) {
+        this.skipOnboardingMail = skipOnboardingMail;
+    }
 }
