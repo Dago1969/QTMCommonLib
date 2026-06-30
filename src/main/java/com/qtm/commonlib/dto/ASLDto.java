@@ -25,4 +25,5 @@ public class ASLDto {
     private String sitoWeb;
     private String partitaIva;
     private String note;
+    private java.util.List<ReferentDto> referents;
 }
