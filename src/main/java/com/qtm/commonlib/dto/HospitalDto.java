@@ -1,0 +1,22 @@
+package com.qtm.commonlib.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
+public class HospitalDto {
+    private Long id;
+    private String anno;
+    private String codiceRegione;
+    private String codiceAsl;
+    private String codiceStruttura;
+    private String struttura;
+    private String indirizzo;
+    private Long hospitalTypeId;
+    private Long aslId;
+}
