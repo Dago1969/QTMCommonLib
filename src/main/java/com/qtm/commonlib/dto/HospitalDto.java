@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 public class HospitalDto {
     private Long id;
-    private String anno;
     private String codiceRegione;
     private String codiceAsl;
     private String codiceStruttura;
