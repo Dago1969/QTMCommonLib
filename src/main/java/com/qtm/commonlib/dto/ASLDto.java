@@ -24,6 +24,7 @@ public class ASLDto {
     private String email;
     private String sitoWeb;
     private String partitaIva;
+    private String codiceRegione;
     private String note;
     private java.util.List<ReferentDto> referents;
 }

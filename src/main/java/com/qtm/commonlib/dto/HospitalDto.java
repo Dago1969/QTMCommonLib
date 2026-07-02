@@ -18,4 +18,9 @@ public class HospitalDto {
     private String indirizzo;
     private Long hospitalTypeId;
     private Long aslId;
+    // Nome comune come fornito da QTMTicket
+    private String comune;
+    private Long cityId;
+    // Sigla o descrizione provincia fornita da QTMTicket (es. "MI", "Milano")
+    private String siglaProvincia;
 }
