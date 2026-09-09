@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/20260909-01-add-caregiver-relationship.yaml
+      relativeToChangelogFile: false
