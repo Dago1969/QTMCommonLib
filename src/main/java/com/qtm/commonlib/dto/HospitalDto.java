@@ -11,12 +11,16 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 public class HospitalDto {
     private Long id;
+    private Integer anno;
     private String codiceRegione;
+    private String regione;
     private String codiceAsl;
+    private String asl;
     private String codiceStruttura;
     private String struttura;
     private String indirizzo;
     private Long hospitalTypeId;
+    private String tipoStruttura;
     private Long aslId;
     // Nome comune come fornito da QTMTicket
     private String comune;
