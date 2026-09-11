@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 public class ASLDto {
     private Long id;
+    private Integer anno;
     private String codiceAzienda;
     private String denominazioneAzienda;
     private Long cityId;
