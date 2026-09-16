@@ -18,6 +18,7 @@ public class ASLDto {
     private String codiceAzienda;
     private String denominazioneAzienda;
     private Long cityId;
+    private Long provinceId;
     private String indirizzo;
     private String cap;
     private String telefono;
