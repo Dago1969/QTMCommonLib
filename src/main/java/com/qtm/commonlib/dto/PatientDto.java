@@ -38,7 +38,8 @@ public class PatientDto {
     private String dataProcessingConsentRevocationLog;
     private String additionalConsents;
     private String therapyStatus;
-    private String prescribingSpecialist;
+    private Long prescribingSpecialist;
+    private Long departmentId;
     private String referenceHospitalStructure;
     private String referencePharmacy;
     private String preferredPickupPharmacy;
