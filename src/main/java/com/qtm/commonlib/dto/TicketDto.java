@@ -21,8 +21,12 @@ public class TicketDto {
     private String project;
     private String patientId;
     private String therapeuticPlanId;
-    private String ticketType;
-    private String status;
+    private LocalDateTime visitDate;
+    private String prevalentNurseId;
+    private String hospitalId;
+    private String departmentId;
+    private String ticketType; // String instead of enum for API compatibility
+    private String status; // String instead of enum for API compatibility
     private String title;
     private String description;
     private String contentJson;
