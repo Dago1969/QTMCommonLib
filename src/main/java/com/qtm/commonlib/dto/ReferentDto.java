@@ -19,4 +19,5 @@ public class ReferentDto {
     private String role;
     private String phone;
     private String email;
+    private String note;
 }
