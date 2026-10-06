@@ -1,0 +1,3 @@
+QTMCommonLib non richiede variabili d'ambiente runtime.
+
+La libreria contiene DTO e componenti condivisi e non avvia un'applicazione.
