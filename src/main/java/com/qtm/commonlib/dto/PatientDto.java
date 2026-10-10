@@ -1,5 +1,7 @@
 package com.qtm.commonlib.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,6 +25,7 @@ public class PatientDto {
     private String email;
     private String primaryPhone;
     private String secondaryPhone;
+    private String otpRecipient;
     private Long regionId;
     private String region;
     private Long provinceId;
@@ -48,6 +51,8 @@ public class PatientDto {
     private String caregiverFullName;
     private String caregiverPhone;
     private String preferredContact;
+    @JsonProperty("hospitalId")
+    @JsonAlias("structureId")
     private Long structureId;
     /**
      * Data di nascita del paziente.

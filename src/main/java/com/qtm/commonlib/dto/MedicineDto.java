@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * DTO farmaco condiviso tra i moduli QTM per esporre i dati AIC persistiti in QTMDB.
+ * DTO farmaco condiviso tra i moduli QTM per esporre il catalogo AIC centralizzato in QTMTicket.
  */
 @Getter
 @Setter
@@ -28,4 +28,5 @@ public class MedicineDto {
     private String fornitura;
     private String linkFi;
     private String linkRcp;
+    private boolean visibleForTenants;
 }
