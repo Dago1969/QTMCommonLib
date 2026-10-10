@@ -55,7 +55,7 @@ public class ProjectDto {
     /**
      * Elenco amministratori selezionati nel wizard progetto.
      */
-    private List<ProjectAdministratorDto> administrators = new ArrayList<>();
+    private List<ProjectAdministratorDto> administrators;
 
     /**
      * Elenco ruoli collegati al progetto.
@@ -71,4 +71,9 @@ public class ProjectDto {
      * Template JSON delle visite associato al progetto.
      */
     private String jsonVisit;
+
+    /**
+     * Definizione JSON della survey associata al progetto.
+     */
+    private String jsonSurvey;
 }
