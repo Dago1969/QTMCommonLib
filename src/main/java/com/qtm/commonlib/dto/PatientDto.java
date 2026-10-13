@@ -38,6 +38,9 @@ public class PatientDto {
     private String identificationDocumentReference;
     private Boolean dataProcessingConsent;
     private LocalDateTime dataProcessingConsentDateTime;
+    private LocalDateTime dataProcessingConsentRevocationDateTime;
+    private Boolean consentRevoked;
+    private String dataProcessingConsentRevocationReason;
     private String dataProcessingConsentRevocationLog;
     private String additionalConsents;
     private String therapyStatus;
