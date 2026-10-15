@@ -12,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class MedicineDto {
 
-    private Long id;
     private String codiceAic;
     private String codFarmaco;
     private String codConfezione;
